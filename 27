@@ -1,0 +1,8 @@
+else if(e.keyCode==27) { //Escape Button
+    if(elm.hasClass( "screenshotModal"))
+    {
+       var parent =elm.find('.close-modal').attr('data-reveal-id');
+       $('#'+parent).foundation('reveal','open');
+       parent="";
+     }
+  }

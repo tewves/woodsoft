@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <form id="contact-form">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+  </form>
+  <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+  <script>
+    $('#contact-form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: '//formspree.io/tewves@gmail.com',
+        method: 'POST',
+        data: {"Demo requested by": "sumy@tewve.com"},
+        dataType: 'json'
+      }).done(function(data) {
+        if (console && console.log) {
+          console.log(data);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

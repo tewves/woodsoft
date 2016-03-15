@@ -1,0 +1,17 @@
+
+/*******************************/
+.modal {
+
+
+
+}
+
+#myModal3 .img-wrapper img {
+	width:90% !important;
+	border: 1.5px solid #666;
+}
+.modal a {
+	color:#c41411;
+}
+#myModal3 ul{
+margin-top: -30px;}
