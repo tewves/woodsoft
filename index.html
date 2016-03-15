@@ -1462,7 +1462,7 @@
                         <div class="page-block c-right v-zoomIn">
                             <div class="wrapper">
                                 <div>
-                                    <form class="message form send_message_form">
+                                    <form id="submit-message-form" class="message form send_message_form">
                                         <div class="fields clearfix">
                                             <div class="input">
                                                 <label for="ws-name">Name </label>
@@ -3030,7 +3030,7 @@
                   e.preventDefault();
                   var DTO = {
                     "Demo requested by": $("#reg-email").val(),
-                    "_subject": "WoodSoft Website Demo Request"
+                    "_subject": "WoodSoft Website Demo Request."
                   };
                   $.ajax({
                     url: '//formspree.io/info@leanthoughts.com',
@@ -3046,12 +3046,12 @@
                     // }
                   });
                 });
-            $('#submit-message').submit(function(e) {
-              
+            $('#submit-message-form').submit(function(e) {
+
               $.blockUI({message: ""});
               e.preventDefault();
               var DTO = {
-                "_subject": "Message from woodsoftech.com",
+                "_subject": "Message from woodsoftech.com Contact Us page.",
                 "Organisation Name": $("#ws-name").val(),
                 "Address": $("#ws-address1").val(),
                 "City": $("#ws-city").val(),
@@ -3064,8 +3064,8 @@
                 "Note": $("#ws-note").val()
               };
               $.ajax({
-                //url: '//formspree.io/info@leanthoughts.com',
-                url: '//formspree.io/haris@tewve.com',
+                url: '//formspree.io/info@leanthoughts.com',
+                //url: '//formspree.io/haris@tewve.com',
                 method: 'POST',
                 data: DTO,
                 dataType: 'json'
